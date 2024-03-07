@@ -1,6 +1,6 @@
 package it.unibz.bulletify.querier;
 
-import it.unibz.bulletify.querier.core.RecordItems;
+import it.unibz.bulletify.querier.app.RecordItems;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
