@@ -1,5 +1,7 @@
 package it.unibz.bulletify.querier.core;
 
+import it.unibz.bulletify.querier.utils.ItemRepoMockBuilder;
+import it.unibz.bulletify.querier.utils.ItemsGenerator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -56,11 +58,6 @@ class SearchItemsTest {
     }
 
     private List<Item> generateItemsOfCategory(String category) {
-        return List.of(
-                new Item(1L, "item one", category),
-                new Item(2L, "item two", category),
-                new Item(3L, "item three", category),
-                new Item(4L, "item four", category)
-        );
+        return ItemsGenerator.generateItemsOfCategory(category);
     }
 }

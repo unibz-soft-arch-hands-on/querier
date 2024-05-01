@@ -1,12 +1,14 @@
-package it.unibz.bulletify.querier.core;
+package it.unibz.bulletify.querier.utils;
 
+import it.unibz.bulletify.querier.core.Item;
+import it.unibz.bulletify.querier.core.ItemRepository;
 import org.mockito.Mockito;
 import org.mockito.stubbing.OngoingStubbing;
 
 import java.util.List;
 
-class ItemRepoMockBuilder {
-    static ItemRepoMockBuilder init(ItemRepository itemRepository) {
+public class ItemRepoMockBuilder {
+    public static ItemRepoMockBuilder init(ItemRepository itemRepository) {
         return new ItemRepoMockBuilder(itemRepository);
     }
 
