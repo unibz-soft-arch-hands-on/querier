@@ -3,10 +3,7 @@ package it.unibz.bulletify.querier.app;
 import it.unibz.bulletify.querier.core.Item;
 import it.unibz.bulletify.querier.core.SearchItems;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,6 +17,7 @@ public class SearchItemsController {
         this.searchItems = searchItems;
     }
 
+    @CrossOrigin
     @GetMapping
     public ItemsDTO findAllByCategory(@RequestParam(name = "category") String category) {
         List<Item> items = this.searchItems.findAllByCategory(category);
